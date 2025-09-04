@@ -1,0 +1,67 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/dotnet
+{
+	"name": "C# (.NET)",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"dockerComposeFile": [
+		"./docker-compose.yml"
+	],
+	"service": "poc-csharp",
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"terminal.integrated.profiles.linux": {
+					"bash": {
+						"path": "/bin/bash"
+					}
+				},
+				"terminal.integrated.defaultProfile.linux": "bash",
+				"git.allowNoVerifyCommit": true,
+				"dotnetAcquisitionExtension.existingDotnetPath": [
+					{
+						"extensionId": "ms-dotnettools.csharp",
+						"path": "/usr/bin/dotnet" 
+					}
+				]
+			},
+			"extensions": [
+				"ms-ceintl.vscode-language-pack-ja",
+                "ms-dotnettools.csharp",
+				"eamodio.gitlens",
+				"mhutchie.git-graph",
+				"redhat.vscode-yaml",
+				"hediet.vscode-drawio",
+				"oderwat.indent-rainbow",
+				"aaron-bond.better-comments",
+				"mechatroner.rainbow-csv",
+				"ryu1kn.partial-diff",
+				"pkief.material-icon-theme",
+				"mitchdenny.ecdc",
+				"ms-vsliveshare.vsliveshare"
+			]
+		}
+	},
+	"forwardPorts": [],
+	"workspaceFolder": "/workspace",
+	"overrideCommand": true
+
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	// "features": {},
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [5000, 5001],
+	// "portsAttributes": {
+	//		"5001": {
+	//			"protocol": "https"
+	//		}
+	// }
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "dotnet restore",
+
+	// Configure tool-specific properties.
+	// "customizations": {},
+
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
+}
