@@ -42,8 +42,8 @@ void main()
                     "B"u8.ToArray(),
                     new (Exastro.Common.Utf8StringEqualityComparer.Default)
                     {
-                        { "zabbix_clock"u8.ToArray(), ConvertUtf16ToUtf8($"2025/09/05 00:00:00.{i:04d}") },
-                        { "zabbix_eventid"u8.ToArray(), ConvertUtf16ToUtf8($"event-{i:04d}") }
+                        { "zabbix_clock"u8.ToArray(), ConvertUtf16ToUtf8($"2025/09/05 00:00:00.{i:D4}") },
+                        { "zabbix_eventid"u8.ToArray(), ConvertUtf16ToUtf8($"event-{i:D4}") }
                     }
                 }
             };
